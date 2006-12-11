@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sysconfdir	%(%{apxs} -q SYSCONFDIR 2>/dev/null)
 
 %description
-%{name} adds support to Apache 2 to provide AppArmor confinement to
-individual CGI scripts handled by Apache modules like mod_php and
+mod_apparmor adds support to Apache 2 to provide AppArmor confinement
+to individual CGI scripts handled by Apache modules like mod_php and
 mod_perl. This package is part of a suite of tools that used to be
 named SubDomain.
 
