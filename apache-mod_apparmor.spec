@@ -3,6 +3,7 @@
 %define		_ver 2.0
 %define		_svnrel		64
 Summary:	Apache module: AppArmor
+Summary(pl):	Modu³ Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
 Version:	%{_ver}.%{_svnrel}
 Release:	0.9
@@ -21,10 +22,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sysconfdir	%(%{apxs} -q SYSCONFDIR 2>/dev/null)
 
 %description
-%{name} adds support to apache2 to provide AppArmor confinement to
-individual cgi scripts handled by apache modules like mod_php and
+%{name} adds support to Apache 2 to provide AppArmor confinement to
+individual CGI scripts handled by Apache modules like mod_php and
 mod_perl. This package is part of a suite of tools that used to be
 named SubDomain.
+
+%description -l pl
+mod_apparmor dodaje do Apache'a 2 obs³ugê ograniczeñ AppArmor dla
+poszczególnych skryptów CGI obs³ugiwanych przez modu³y Apache'a takie
+jak mod_php czy mod_perl. Ten pakiet jest czê¶ci± zestawu narzêdzi
+zwanych SubDomain.
 
 %prep
 %setup -q -n apache2-mod-%{mod_name}-%{_ver}
