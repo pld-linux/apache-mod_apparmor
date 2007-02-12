@@ -3,7 +3,7 @@
 %define		_ver 2.0
 %define		_svnrel		64
 Summary:	Apache module: AppArmor
-Summary(pl.UTF-8):   Moduł Apache'a: AppArmor
+Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
 Version:	%{_ver}.%{_svnrel}
 Release:	0.9
