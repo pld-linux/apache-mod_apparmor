@@ -3,7 +3,7 @@
 %define		_ver 2.0
 %define		_svnrel		64
 Summary:	Apache module: AppArmor
-Summary(pl):	Modu³ Apache'a: AppArmor
+Summary(pl.UTF-8):   ModuÅ‚ Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
 Version:	%{_ver}.%{_svnrel}
 Release:	0.9
@@ -27,10 +27,10 @@ to individual CGI scripts handled by Apache modules like mod_php and
 mod_perl. This package is part of a suite of tools that used to be
 named SubDomain.
 
-%description -l pl
-mod_apparmor dodaje do Apache'a 2 obs³ugê ograniczeñ AppArmor dla
-poszczególnych skryptów CGI obs³ugiwanych przez modu³y Apache'a takie
-jak mod_php czy mod_perl. Ten pakiet jest czê¶ci± zestawu narzêdzi
+%description -l pl.UTF-8
+mod_apparmor dodaje do Apache'a 2 obsÅ‚ugÄ™ ograniczeÅ„ AppArmor dla
+poszczegÃ³lnych skryptÃ³w CGI obsÅ‚ugiwanych przez moduÅ‚y Apache'a takie
+jak mod_php czy mod_perl. Ten pakiet jest czÄ™Å›ciÄ… zestawu narzÄ™dzi
 zwanych SubDomain.
 
 %prep
