@@ -1,16 +1,17 @@
 %define		mod_name	apparmor
 %define 	apxs		/usr/sbin/apxs
-%define		_ver 2.0
-%define		_svnrel		64
+%define		_ver 2.0.1
+%define		_svnrel		306
 Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
 Version:	%{_ver}.%{_svnrel}
 Release:	0.9
+Epoch:		1
 License:	GPL
 Group:		Networking/Daemons
-Source0:	http://forgeftp.novell.com/apparmor/Development%20-%20October%20Snapshot/apache2-mod-%{mod_name}-%{_ver}-%{_svnrel}.tar.gz
-# Source0-md5:	f01839ada8e1c2ea12d02384b89b15b5
+Source0:	http://forge.novell.com/modules/xfcontent/private.php/apparmor/Development%20-%20March%2007%20-%20SnapShot/apache2-mod_%{mod_name}-%{_ver}-%{_svnrel}.tar.gz
+# Source0-md5:	9522293b9b9c3db9b1f55ba619c97412
 URL:		http://forge.novell.com/modules/xfmod/project/?apparmor
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
@@ -34,7 +35,7 @@ jak mod_php czy mod_perl. Ten pakiet jest częścią zestawu narzędzi
 zwanych SubDomain.
 
 %prep
-%setup -q -n apache2-mod-%{mod_name}-%{_ver}
+%setup -q -n apache2-mod_%{mod_name}-%{_ver}
 
 %build
 %{__make} mod_%{mod_name}.so \
