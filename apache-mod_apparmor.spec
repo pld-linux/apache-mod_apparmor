@@ -13,7 +13,7 @@ Group:		Networking/Daemons
 Source0:	http://forge.novell.com/modules/xfcontent/private.php/apparmor/Development%20-%20March%2007%20-%20SnapShot/apache2-mod_%{mod_name}-%{_ver}-%{_svnrel}.tar.gz
 # Source0-md5:	9522293b9b9c3db9b1f55ba619c97412
 URL:		http://forge.novell.com/modules/xfmod/project/?apparmor
-BuildRequires:	apache-apxs >= 2.0
+BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
 BuildRequires:	libapparmor-devel
 Requires:	apache(modules-api) = %apache_modules_api
