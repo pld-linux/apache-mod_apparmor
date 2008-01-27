@@ -6,7 +6,7 @@ Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
 Version:	%{_ver}.%{_svnrel}
-Release:	0.9
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Networking/Daemons
