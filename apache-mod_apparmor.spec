@@ -1,6 +1,6 @@
 %define		mod_name	apparmor
 %define 	apxs		/usr/sbin/apxs
-%define		_ver 2.1.2
+%define		_ver 2.3
 %define		_svnrel		907
 Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
@@ -10,8 +10,8 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		Networking/Daemons
-Source0:	http://forge.novell.com/modules/xfcontent/private.php/apparmor/AppArmor-2.1.2/apache2-mod_%{mod_name}-%{_ver}-%{_svnrel}.tar.gz
-# Source0-md5:	3357cdf17ff1879fdc1a2cd3042f9a1b
+Source0:	http://forge.novell.com/modules/xfcontent/private.php/apparmor/AppArmor%202.3-Beta1/apache2-mod_%{mod_name}-%{_ver}-%{_svnrel}.tar.gz
+# Source0-md5:	d4b187c6c72f19a39ae9a4a7f76546f0
 URL:		http://forge.novell.com/modules/xfmod/project/?apparmor
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
