@@ -9,7 +9,7 @@ Version:	%{_ver}.%{_svnrel}
 Release:	1
 Epoch:		1
 License:	GPL
-Group:		Networking/Daemons
+Group:		Networking/Daemons/HTTP
 Source0:	http://forge.novell.com/modules/xfcontent/private.php/apparmor/AppArmor%202.3-Beta1/apache2-mod_%{mod_name}-%{_ver}-%{_svnrel}.tar.gz
 # Source0-md5:	d4b187c6c72f19a39ae9a4a7f76546f0
 URL:		http://forge.novell.com/modules/xfmod/project/?apparmor
