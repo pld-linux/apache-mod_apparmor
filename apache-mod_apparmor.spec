@@ -1,18 +1,16 @@
 %define		mod_name	apparmor
 %define 	apxs		/usr/sbin/apxs
-%define		ver 	2.3
-%define		svnrel		907
 Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
-Version:	%{ver}.%{svnrel}
-Release:	2
+Version:	2.5
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Networking/Daemons/HTTP
-Source0:	http://forge.novell.com/modules/xfcontent/private.php/apparmor/AppArmor%202.3-Beta1/apache2-mod_%{mod_name}-%{ver}-%{svnrel}.tar.gz
-# Source0-md5:	d4b187c6c72f19a39ae9a4a7f76546f0
-URL:		http://forge.novell.com/modules/xfmod/project/?apparmor
+Source0:	http://kernel.org/pub/linux/security/apparmor/AppArmor-%{version}/AppArmor-%{version}.tgz
+# Source0-md5:	4a747d1a1f85cb272d55b52c7e8a4a02
+URL:		http://apparmor.wiki.kernel.org/
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
 BuildRequires:	libapparmor-devel
@@ -35,14 +33,16 @@ jak mod_php czy mod_perl. Ten pakiet jest częścią zestawu narzędzi
 zwanych SubDomain.
 
 %prep
-%setup -q -n apache2-mod_%{mod_name}-%{ver}
+%setup -q -n AppArmor-%{version}
 
 %build
-%{__make} mod_%{mod_name}.so \
+%{__make} -C changehat/mod_apparmor mod_%{mod_name}.so \
 	APXS=%{apxs}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
+cd changehat/mod_apparmor
 
 install -D mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}/mod_%{mod_name}.so
 install -D mod_%{mod_name}.conf $RPM_BUILD_ROOT%{_sysconfdir}/00_mod_%{mod_name}.conf
