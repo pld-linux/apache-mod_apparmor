@@ -3,13 +3,13 @@
 Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
-Version:	2.5
+Version:	2.6.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Networking/Daemons/HTTP
-Source0:	http://kernel.org/pub/linux/security/apparmor/AppArmor-%{version}/AppArmor-%{version}.tgz
-# Source0-md5:	4a747d1a1f85cb272d55b52c7e8a4a02
+Source0:	http://launchpad.net/apparmor/2.6/%{version}/+download/apparmor-%{version}.tar.gz
+# Source0-md5:	3b4fb4186ac6440a03d8f2dcf188d4b4
 URL:		http://apparmor.wiki.kernel.org/
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
@@ -33,7 +33,7 @@ jak mod_php czy mod_perl. Ten pakiet jest częścią zestawu narzędzi
 zwanych SubDomain.
 
 %prep
-%setup -q -n AppArmor-%{version}
+%setup -q -n apparmor-%{version}
 
 %build
 %{__make} -C changehat/mod_apparmor mod_%{mod_name}.so \
