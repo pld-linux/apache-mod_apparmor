@@ -6,15 +6,16 @@ Name:		apache-mod_%{mod_name}
 Version:	2.7.2
 Release:	1
 Epoch:		1
-License:	GPL
+License:	LGPL v2.1
 Group:		Networking/Daemons/HTTP
 Source0:	http://launchpad.net/apparmor/2.7/%{version}/+download/apparmor-%{version}.tar.gz
 # Source0-md5:	2863e85bdfdf9ee35b83db6721fed1f1
 URL:		http://apparmor.wiki.kernel.org/
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
-BuildRequires:	libapparmor-devel >= %{version}
+BuildRequires:	libapparmor-devel >= 1:%{version}
 Requires:	apache(modules-api) = %apache_modules_api
+Requires:	libapparmor >= 1:%{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR 2>/dev/null)
@@ -60,5 +61,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*_mod_%{mod_name}.conf
-%attr(755,root,root) %{_pkglibdir}/*.so
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/00_mod_apparmor.conf
+%attr(755,root,root) %{_pkglibdir}/mod_apparmor.so
