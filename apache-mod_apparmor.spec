@@ -3,13 +3,13 @@
 Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
-Version:	2.7.2
+Version:	2.8.0
 Release:	1
 Epoch:		1
 License:	LGPL v2.1
 Group:		Networking/Daemons/HTTP
-Source0:	http://launchpad.net/apparmor/2.7/%{version}/+download/apparmor-%{version}.tar.gz
-# Source0-md5:	2863e85bdfdf9ee35b83db6721fed1f1
+Source0:	http://launchpad.net/apparmor/2.8/%{version}/+download/apparmor-%{version}.tar.gz
+# Source0-md5:	eaf90c52992df3d205a753b2933595fe
 URL:		http://apparmor.wiki.kernel.org/
 BuildRequires:	%{apxs}
 BuildRequires:	apache-devel >= 2.0.52-2
