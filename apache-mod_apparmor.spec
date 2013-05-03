@@ -4,7 +4,7 @@ Summary:	Apache module: AppArmor
 Summary(pl.UTF-8):	Moduł Apache'a: AppArmor
 Name:		apache-mod_%{mod_name}
 Version:	2.8.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL v2.1
 Group:		Networking/Daemons/HTTP
